@@ -28,7 +28,9 @@
             <option value="<link ">link Tag Start</option>
             <option value="<script ">script Tag Start</option>
             <option value=">">Any Tag End</option>
+            <option value="" style="visibility: hiddin;display:none;" selected></option>
         </select>
+        <button type="text" name="data" value=" > ">End Any Tag</button>
         <button type="submit">Add</button>
     </form>
 
@@ -57,12 +59,12 @@
         <button type="submit">Add</button>
     </form>
     <hr>
-    <h2>Preview</h2>
+    <h2>Preview : </h2>
     <section style="width:100%;min-height:30vh;">
         <iframe src="target/index.html" frameborder="0" style="width:100%;min-height:30vh;"></iframe>
     </section>
     <hr>
-    <h2>Text Preview</h2>
+    <h2>Code Preview : </h2>
     <section style="width:100%;min-height:30vh;" id="text_preview">
 
     </section>
