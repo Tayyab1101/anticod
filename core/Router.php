@@ -35,8 +35,6 @@ class Router{
         }
 
         throw new Exception('This route is not defined');
-        
-
     }
 
 }

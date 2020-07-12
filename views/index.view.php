@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,              initial-scale=1.0">;
-    <title>Anti-CODE</title>
+    <title>AntiCOD</title>
 </head>
 <body>
-    <h1>Anti Code</h1>
+    <h1>AntiCod</h1>
     
     <h3>Add HTML TAGS</h3>
     <form method="POST" action="/tags">
@@ -59,35 +59,15 @@
         <button type="submit">Add</button>
     </form>
     <hr>
+	<button><a href="/output" style="text-decoration:none;">Open Preview In A New Tab</a></button>
     <h2>Preview : </h2>
     <section style="width:100%;min-height:30vh;">
         <iframe src="target/index.html" frameborder="0" style="width:100%;min-height:30vh;"></iframe>
     </section>
     <hr>
     <h2>Code Preview : </h2>
-    <section style="width:100%;min-height:30vh;" id="text_preview">
-
-    </section>
-
-    <script>
-        function readTextFile(file)
-                            {
-                        var rawFile = new XMLHttpRequest();
-                        rawFile.open("GET", file, false);
-                        rawFile.onreadystatechange = function ()
-                        {
-                            if(rawFile.readyState === 4)
-                            {
-                                if(rawFile.status === 200 || rawFile.status == 0)
-                                {
-                                    var allText = rawFile.responseText;
-                                    document.querySelector('#text_preview').innerText = allText;
-                                }
-                            }
-                        }
-                        rawFile.send(null);
-                    }
-                    readTextFile("target/index.html");
-    </script>
+    <code style="width:100%;min-height:30vh;" id="text_preview">
+		<?php echo htmlspecialchars(file_get_contents("target/index.html"));?>
+    </code>
 </body>
 </html>

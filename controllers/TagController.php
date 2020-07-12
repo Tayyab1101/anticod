@@ -8,11 +8,10 @@ class TagController{
     }
     public function result()
     {
-        die(shell_exec("target\index.html"));
+		return require "target/index.html";
     }
     public function add()
     {
-
         $data = implode('',array_values($_POST));
 
         if(isset($_POST['dt']) == true && $_POST['dt'] == 'attributes'){
